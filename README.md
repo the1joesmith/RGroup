@@ -1,5 +1,6 @@
 # RGroup
 Code and examples for University of Montana's RGroup
+
 Fall 2017
 
 ## Some resources for learning R
