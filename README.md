@@ -8,5 +8,6 @@ Fall 2017
 -	[RStudio online learning](https://www.rstudio.com/online-learning/)
 -	[Other](http://www.skilledup.com/articles/5-free-courses-learning-r-programming)
 
-## GitHub
-- [GitHub Desktop Getting Started](https://help.github.com/desktop-beta/guides/contributing-to-projects/)
+## GitHub Guides
+- [GitHub](https://guides.github.com/)
+- [GitHub Desktop](https://help.github.com/desktop-beta/guides/contributing-to-projects/)
