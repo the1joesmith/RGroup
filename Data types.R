@@ -14,10 +14,12 @@
                     name = b, 
                     finisher = c,
                     date = d,
-                    is.female = is.female)
+                    is.female = is.female,
+                    stringsAsFactors = F)
   
   # Examples with vectors
   a
   a + 3
   a + c(1, 2, 1, 2)
-  a + c(4, 4, 4) # Warning
+  a + c(4, 2, 1) # Warning
+  
