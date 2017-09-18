@@ -84,7 +84,7 @@ newvar <- my.fn()
 ```
 and newvar will take on the value of the thing your function returns 
 
-# Assignment
+# Practice
 1. Brainstorm at least 5 words that describe what you want to learn about R this semester
 2. Create a data frame called dat, following this example:
 
