@@ -11,3 +11,12 @@ Fall 2017
 ## GitHub Guides
 - [GitHub](https://guides.github.com/)
 - [GitHub Desktop](https://help.github.com/desktop-beta/guides/contributing-to-projects/)
+
+## Cheat Sheets
+- [dplyr](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+- [Coordinate Reference Systems](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf)
+- [projections](http://pakillo.github.io/R-GIS-tutorial/#rasterstack)
+
+## Other links
+- [tmap](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html)
+
