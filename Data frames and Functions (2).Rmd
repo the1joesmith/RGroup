@@ -1,0 +1,152 @@
+---
+title: "Data Frames and Functions"
+author: "Anna Moeller"
+date: "September 19, 2017"
+output: 
+  html_document:
+    theme: cerulean
+    highlight: haddock
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data frames
+- Each column is a vector
+- Find columns by their name with $ (dataframename$columnname)
+- subsetting with []
+
+    read [] as *where*, e.g., "find tmp where tmp equals 'sdf' "
+    ```{r}
+    tmp <- c("a", "sdf", "frog", "sdf")
+    tmp[tmp == "sdf"]
+    ```
+    work from the inside out:
+    ```{r}
+    tmp == "sdf"
+    ```
+    so `tmp[tmp == "sdf"]` gives you the value of tmp everywhere `tmp == "sdf" ` is TRUE (e.g., positions 2 and 4)
+    
+    This also works with other vectors
+    ```{r}
+    xx <- c(14, 26, 13, 12)
+    xx[tmp == "sdf"]
+    ```
+    gives you the value of xx everywhere `tmp == "sdf"` is TRUE (positions 2 and 4)
+    
+    This is all important when subsetting data frames
+    ```{r}
+  # Data.frame
+  dat <- data.frame(weight = c(1, 5, 235, pi),
+                    name = c("A", "B", "f", "gorilla"),
+                    finisher = as.factor(seq(1:4)),
+                    date = as.Date(c("2017-04-05", "2017-04-09", "2017-04-01", "2017-03-05")),
+                    is.female = c(T, F, T, T),
+                    stringsAsFactors = F)
+    dat
+    ```
+    - now there are two dimensions (length and width)
+    ```{r}
+    dim(dat)
+    ```
+    every time you subset with [], you must specify both dimensions
+    ```{r}
+    dat[1, 4]
+    dat[1, ]
+    dat[, 4]
+    dat[dat$name == "gorilla", ]
+    ```
+    
+    - read `dat[dat$word == "shiny", ]` as "the rows of dat *where* the column dat$word is 'shiny', and show me all columns of those rows"
+    ```{r}
+    dat[, c("name", "is.female")]
+    dat[, c(2, 5)]
+    ```
+    - Using `%in%`
+    ```{r}
+    dat[dat$name %in% c("gorilla", "f"), ]
+    ```
+
+# Functions
+- code will always look like
+```{r, eval = F}
+my.fn <- function(){
+  
+}
+```
+- arguments = variables
+- default values
+- return() (will return only one item from your function)
+- Call your function with
+```{r, eval = F}
+newvar <- my.fn()
+```
+and newvar will take on the value of the thing your function returns 
+
+# Practice
+1. Brainstorm at least 5 words that describe what you want to learn about R this semester
+2. Create a data frame called dat, following this example:
+
+```{r echo = F}
+  dat <- data.frame(name = "Anna",
+                    word = c("shiny", 
+                             "web scraping", 
+                             "automating",
+                             "tidyverse", 
+                             "Git"), 
+                    order = 1:5,
+                    stringsAsFactors = F)
+  knitr::kable(dat, 
+               caption = "Example Data Frame", 
+               padding = 0)
+               # align = "l", 
+               # format = "markdown", 
+               # )
+
+  # ```{r , results = "asis" }
+  # xtable::xtable(dat, type = "html", caption = "xtable")
+  # print(xtable::xtable(dat, caption = "Example 2"),
+  #       type = "html",
+  #       html.table.attributes = "border=0")
+  # stargazer::stargazer(dat, summary = F, rownames = F, align = T,
+  #                      type = "html", title = "Example data frame")
+```
+```{r, echo = F}
+ my.fn <- function(name){
+   out <- data.frame(name = name,
+                    word = c("shiny", 
+                             "web scraping", 
+                             "automating",
+                             "tidyverse", 
+                             "Git"), 
+                    order = 1:5,
+                    stringsAsFactors = F)
+   return(out)
+ }
+dat2 <- my.fn(name = "AnnA")
+
+```
+
+3. Save this as an RData file. Practice closing your R session and loading dat without re-running your code. 
+
+### Notes
+1. Make sure that your column names match mine exactly
+2. Make sure that your columns are characters, not factors
+3. Make everything lower case, unless it is a proper noun
+
+### Further practice (use Google, help files, and your neighbors!)
+- See what happens if your column names are not all the same length, when defining your data frame
+- Practice changing an entire column at once from lower case to upper case
+- Send your RData file to a friend and combine the two data.frames. 
+- Change one person's columns to factors and see what happens if you try to combine the two data frames
+- Subset 
+    - Subset your data to only the rows where order = 3 or 4
+    - Subset your data to only columns 1 and 3
+- Change your data.frame to a tibble. Compare and contrast the two
+- Turn this code into a function that takes no arguments. Turn it into a function that takes the argument "name" and fills in the first column of your data frame. Practice calling your function. Assign the output of your function to a new object named "dat2"
+
+### More advanced practice
+- Try changing the order of your rows using the function order()
+- Use gsub() to change one of your column names
+- Create a word cloud from your data frame
