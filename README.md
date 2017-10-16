@@ -14,6 +14,7 @@ Fall 2017
 
 ## Cheat Sheets
 - [dplyr](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+- [RMarkdown](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 - [Coordinate Reference Systems](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf)
 - [projections](http://pakillo.github.io/R-GIS-tutorial/#rasterstack)
 
