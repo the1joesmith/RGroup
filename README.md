@@ -26,7 +26,7 @@ Fall 2017
 - [tidyverse reference page](http://ggplot2.tidyverse.org/reference/)
 
 ## pwr 
-- [Getting started with the pwr package] (https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html)  
+- [Getting started with the pwr package](https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html)  
 
 ## Other links
 - [tmap](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html)
