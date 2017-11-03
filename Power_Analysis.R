@@ -30,7 +30,7 @@ library("ggplot2")
 # t-tests, and GLMs. We'll use the GLM function for most of the demonstration.
 
 # GLM power analysis
-pwr.f2.test(u=2, v=20, f2=NULL, sig.level=.05, power=.9)
+pwr.f2.test(u=2, v=20, f2=.5, sig.level=.05, power=NULL)
 # u is the number of covariates (degrees of freeedom 1)
 # v is the number of samples (n) (degrees of freedom 2)
 # f2 is the effect size (solving for)
@@ -55,12 +55,12 @@ pwr.f2.test(u=2, v=NULL, f2=.1, sig.level=.05, power=.9)
 
 strwrs <- function(u,v,f2,sl){
   #A function to return a data frame of power and effect size given p and df
-  dthstr <- numeric(1)
+  dthstr <- rep(NA,length(f2))
   for(i in 1:length(f2)){
     result <- pwr.f2.test(u=u, v=v, f2=f2[i], sig.level = sl, power = NULL)
-    dthstr <- c(dthstr, as.numeric(result[5]))
+    dthstr[i] <- as.numeric(result[5])
   }
-  Power <- dthstr[-1] # Pretty sloppy...
+  Power <- dthstr# Pretty sloppy...
   Effect <- f2
   out <- data.frame(Effect, Power)
   return(out)
@@ -68,7 +68,7 @@ strwrs <- function(u,v,f2,sl){
 
 # Run strwrs with 'x' values for effect size and record the output as empire
 x <- c((1:100)/100) # Is there a better way to do this?
-lapply(x=x, FUN = pwr.f2.test(u=2,v=50,f2=x,sl=.05))
+#lapply(x=x, FUN = pwr.f2.test(u=2,v=50,f2=x,sl=.05))
 
 
 empire <- strwrs(u=2, v=50, f2=x, sl=.05)
@@ -94,10 +94,22 @@ theforce <- function(u,n,f2,sl){
 plot <- ggplot(data.frame(x = c(0,1)), aes(x))
 plot + stat_function(fun=theforce, args=list(u=1, n=30, sl=.05), 
                          aes(colour="30")) + # Sets values for legend display
+   stat_function(fun=theforce, args=list(u=1, n=20, sl=.05), 
+                 aes(colour="20")) + 
+   stat_function(fun=theforce, args=list(u=1, n=10, sl=.05), 
+                 aes(colour="10")) + 
+  scale_colour_manual("N equals", values = rainbow(n=4)) + # Legend title and
+  # color values
+  labs(title="Effect of Sample Size on Power", x="Effect Size", y="Power")
+
+
+plot + stat_function(fun=theforce, args=list(u=1, n=30, sl=.05), 
+                     aes(colour="30")) + # Sets values for legend display
   stat_function(fun=theforce, args=list(u=1, n=20, sl=.05), 
                 aes(colour="20")) + 
   stat_function(fun=theforce, args=list(u=1, n=10, sl=.05), 
                 aes(colour="10")) + 
-  scale_colour_manual("N equals", values = rainbow(n=3)) + # Legend title and
+  scale_colour_manual("N equals", values = rainbow(n=4)) + # Legend title and
   # color values
   labs(title="Effect of Sample Size on Power", x="Effect Size", y="Power")
+
