@@ -25,6 +25,9 @@ Fall 2017
 - [Data Camp](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
 - [tidyverse reference page](http://ggplot2.tidyverse.org/reference/)
 
+## pwr 
+- [Getting started with the pwr package] (https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html)  
+
 ## Other links
 - [tmap](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html)
 
