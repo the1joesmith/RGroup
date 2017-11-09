@@ -6,13 +6,20 @@ There are a few things you need to know to get started.
 1. Git is different than GitHub. Git is a version control system. GitHub uses Git in the background. 
 2. You have two options for making local changes on your computer offline. They are Git (which is command line-based) and GitHub Desktop (which is software with a GUI). 
     - I use GitHub Desktop, which is handy and makes sense for most things. However, you can't do everything in it, so you still have to use your online GitHub. 
+    
 Now go set up an [online GitHub account](https://github.com/) and download the latest version of [GitHub Desktop](https://desktop.github.com/)
 
 Using GitHub for your personal benefit is slightly different than for collaborating with others. Almost all the documentation is about collaborating with others, so let's break the mold and start with how to create your own repository for yourself. 
 
 ### Using GitHub for your own work
+When you're the person in charge of the project, you want to use "clone"
+Online:
+1. Create a repository
 
+GitHub Desktop:
+1. Clone 
 
 ### Using GitHub to collaborate
-
-In your GitHub online: navigate to the [RGroup repository](github.com/annam21/RGroup). You want to fork this repository. 
+When you're *not* the person in charge of the project, you want to use "fork"
+1. In your GitHub online: navigate to the [RGroup repository](github.com/annam21/RGroup). 
+2. Fork this repository. 
