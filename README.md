@@ -10,7 +10,8 @@ Fall 2017
 
 ## GitHub Guides
 - [GitHub](https://guides.github.com/)
-- [GitHub Desktop](https://help.github.com/desktop-beta/guides/contributing-to-projects/)
+- [GitHub Desktop](https://guides.github.com/introduction/getting-your-project-on-github/#desktop)
+- [Creating a Pull Request](https://services.github.com/on-demand/github-desktop/pull-request-github-desktop)
 
 ## Cheat Sheets
 - [dplyr](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
