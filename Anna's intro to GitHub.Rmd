@@ -1,1 +1,5 @@
-How about now? Did that ruin everything? 
+## My introduction to using GitHub for RGroup
+
+There are a few things you need to know to get started.
+1. Git is different than GitHub. Git is a version control system. GitHub uses Git in the background. 
+2. GitHub desktop is a GUI that you can download in order to make most of your local changes. It's handy and makes sense for most things. However, you can't do everything in it, so you still have to use your online GitHub. 
