@@ -30,7 +30,7 @@ When you're *not* the person in charge of the project, you want to use "fork" in
 
 In your GitHub online: 
 1. navigate to the [RGroup repository](github.com/annam21/RGroup). 
-2. Fork this repository. This creates a fork called yourusername/RGroup.
+2. Fork this repository. This creates a fork from annam21/RGroup to your profile called yourusername/RGroup.
 
 GitHub Desktop:
 1. Clone yourusername/RGroup repository. 
