@@ -17,9 +17,20 @@ Online:
 1. Create a repository
 
 GitHub Desktop:
-1. Clone 
+1. Clone that repository
+2. Manipulate files, code, etc. in your File Explorer/Finder the way you normally would.
+3. When you make changes, open GitHub Desktop and make a commit. This commits it locally in the Desktop Git
+4. Sync to take these changes from your desktop to the Internet-based GitHub. 
+Voila!
 
 ### Using GitHub to collaborate
-When you're *not* the person in charge of the project, you want to use "fork"
-1. In your GitHub online: navigate to the [RGroup repository](github.com/annam21/RGroup). 
-2. Fork this repository. 
+When you're *not* the person in charge of the project, you want to use "fork" instead of "clone"
+In your GitHub online: 
+1. navigate to the [RGroup repository](github.com/annam21/RGroup). 
+2. Fork this repository. This creates a fork called yourusername/RGroup.
+GitHub Desktop:
+1. Clone yourusername/RGroup repository. 
+2. Manipulate files, code, etc. and make commits to your local Desktop. 
+3. When you are ready to send me your changes, create a pull request (i.e., ask me to "pull" your changes into my repository). This will ask me to accept your changes from your fork yourusername/RGroup to my repository annam21/RGroup
+4. I will get an email about your pull request. I can go into my online GitHub repo and merge your pull request, which adds all your changes to the master repo. 
+Ta Da!
